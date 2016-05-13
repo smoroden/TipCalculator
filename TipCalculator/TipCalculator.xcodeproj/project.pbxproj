@@ -13,6 +13,7 @@
 		581B96811CE6484D0086890D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581B967F1CE6484D0086890D /* Main.storyboard */; };
 		581B96831CE6484D0086890D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 581B96821CE6484D0086890D /* Assets.xcassets */; };
 		581B96861CE6484D0086890D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 581B96841CE6484D0086890D /* LaunchScreen.storyboard */; };
+		58587DE21CE6598000A362F0 /* TipTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 58587DE11CE6598000A362F0 /* TipTextField.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		581B96821CE6484D0086890D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		581B96851CE6484D0086890D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		581B96871CE6484D0086890D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58587DE01CE6598000A362F0 /* TipTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TipTextField.h; sourceTree = "<group>"; };
+		58587DE11CE6598000A362F0 /* TipTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TipTextField.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				581B96841CE6484D0086890D /* LaunchScreen.storyboard */,
 				581B96871CE6484D0086890D /* Info.plist */,
 				581B96761CE6484D0086890D /* Supporting Files */,
+				58587DE01CE6598000A362F0 /* TipTextField.h */,
+				58587DE11CE6598000A362F0 /* TipTextField.m */,
 			);
 			path = TipCalculator;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				581B967E1CE6484D0086890D /* ViewController.m in Sources */,
 				581B967B1CE6484D0086890D /* AppDelegate.m in Sources */,
 				581B96781CE6484D0086890D /* main.m in Sources */,
+				58587DE21CE6598000A362F0 /* TipTextField.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +306,7 @@
 				581B968C1CE6484D0086890D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

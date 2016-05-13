@@ -26,7 +26,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Tip Amount:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-f1-fql">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Bill Amount:" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="ZQB-f1-fql">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -34,6 +34,7 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="la3-XF-5pD">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <color key="minimumTrackTintColor" red="0.3469998836517334" green="0.51684015989303589" blue="0.59346681833267212" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="tipChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yJ1-qP-6C2"/>
                                 </connections>
@@ -44,9 +45,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5lG-xc-XVF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter the tip.." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5lG-xc-XVF" customClass="TipTextField">
                                 <rect key="frame" x="-25" y="-30" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
                                     <action selector="textChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="q2F-x9-Vh2"/>
@@ -57,17 +58,25 @@
                         <constraints>
                             <constraint firstItem="la3-XF-5pD" firstAttribute="top" secondItem="ZQ0-7i-dPO" secondAttribute="bottom" constant="31" id="2IP-u8-Th0"/>
                             <constraint firstItem="la3-XF-5pD" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="5JA-HZ-VK9"/>
-                            <constraint firstItem="5lG-xc-XVF" firstAttribute="top" secondItem="xqc-ZQ-csI" secondAttribute="bottom" constant="8" id="AfN-OB-xqJ"/>
-                            <constraint firstItem="ZQ0-7i-dPO" firstAttribute="top" secondItem="5lG-xc-XVF" secondAttribute="bottom" constant="8" id="C9P-yS-0Qy"/>
+                            <constraint firstItem="5lG-xc-XVF" firstAttribute="top" secondItem="xqc-ZQ-csI" secondAttribute="bottom" constant="8" id="AfN-OB-xqJ">
+                                <variation key="widthClass=compact" constant="14"/>
+                            </constraint>
+                            <constraint firstItem="ZQ0-7i-dPO" firstAttribute="top" secondItem="5lG-xc-XVF" secondAttribute="bottom" constant="8" id="C9P-yS-0Qy">
+                                <variation key="widthClass=compact" constant="2"/>
+                            </constraint>
                             <constraint firstItem="la3-XF-5pD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="J8j-7e-EGG"/>
                             <constraint firstAttribute="leadingMargin" secondItem="ZQB-f1-fql" secondAttribute="leading" id="QYb-ik-y25"/>
                             <constraint firstItem="xqc-ZQ-csI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="SrX-aC-j8n"/>
-                            <constraint firstItem="5lG-xc-XVF" firstAttribute="leading" secondItem="ZQB-f1-fql" secondAttribute="trailing" constant="9" id="V6L-wz-Mya"/>
+                            <constraint firstItem="5lG-xc-XVF" firstAttribute="leading" secondItem="ZQB-f1-fql" secondAttribute="trailing" constant="9" id="V6L-wz-Mya">
+                                <variation key="widthClass=compact" constant="8"/>
+                            </constraint>
                             <constraint firstItem="ZQ0-7i-dPO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XXl-Kn-aIb"/>
                             <constraint firstItem="xqc-ZQ-csI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XYS-CX-FgT"/>
                             <constraint firstItem="ZQB-f1-fql" firstAttribute="top" secondItem="xqc-ZQ-csI" secondAttribute="bottom" constant="12" id="k5j-bU-bld"/>
                             <constraint firstItem="xqc-ZQ-csI" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-40" id="lAU-Gt-gCD"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="5lG-xc-XVF" secondAttribute="trailing" id="pVD-97-bJ7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5lG-xc-XVF" secondAttribute="trailing" id="pVD-97-bJ7">
+                                <variation key="widthClass=compact" constant="1"/>
+                            </constraint>
                             <constraint firstItem="5lG-xc-XVF" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.53" constant="2" id="yTa-io-hXD"/>
                         </constraints>
                         <variation key="default">
