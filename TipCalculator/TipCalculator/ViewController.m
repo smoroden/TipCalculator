@@ -27,6 +27,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     self.tipPercentage = (int)self.tipSlider.value;
+    self.tipPercentageLabel.text = [NSString stringWithFormat:@"Choose the tip percentage: %0.0f%%", self.tipPercentage];
     
 }
 
